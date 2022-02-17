@@ -120,7 +120,6 @@ import {
   IonSkeletonText,
   IonPage
 } from "@ionic/vue";
-import casteaching from '@albariius/casteaching_arr'
 export default {
   name: "Videos",
   components: {
@@ -154,7 +153,12 @@ export default {
       this.refresher.complete();
     },
     async fetchVideos() {
-      this.videos = await casteaching.videos()
+      try {
+        this.videos = await this.casteaching.videos()
+      } catch (error) {
+        console.log(error);
+        // TODO toast
+      }
     }
   }
 }
