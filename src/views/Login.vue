@@ -110,7 +110,7 @@ export default {
       let path = '/user'
       // route parameters wantedRoute
       if(this.$route.params && this.$route.params.wantedRoute) path = this.$route.params.wantedRoute
-      this.$router.push({ path })
+      await this.$router.push({ path })
     }
   }
 }

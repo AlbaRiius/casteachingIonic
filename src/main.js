@@ -33,6 +33,6 @@ const app = createApp(App)
 
 router.isReady().then(() => {
   app.config.globalProperties.emitter = emitter;
-  app.config.globalProperties.casteaching = casteaching({baseUrl:'https://casteaching.albarius.alumnedam.me/api'});
+  app.config.globalProperties.casteaching = casteaching({baseUrl:'https://casetaching.albarius.alumnedam.me/api'});
   app.mount('#app');
 });
